@@ -41,7 +41,8 @@ class Tagger:
                 self.get_resources()
                 if self.resources:
                     self.tag_resources()
-                    print(f"INFO: {region}: Tagged all resources")
+                    print(f"INFO: {region}: Tagged {len(self.resources)} "
+                          "resources")
                 else:
                     print(f"INFO: {region}: No resources to tag")
             except botocore.exceptions.ClientError as e:
