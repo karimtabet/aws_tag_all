@@ -30,7 +30,7 @@ class Tagger:
         for sub_list in chunked_resources:
             self.client.tag_resources(
                 ResourceARNList=[r["ResourceARN"] for r in sub_list],
-                Tags={'CostCentre': '509A0000'}
+                Tags=self.tags
             )
     
     def tag_all(self):
